@@ -5,7 +5,7 @@ It provides a GUI where vulnerabilities discovered using the [CVE-Scanner](https
 
 Demo
 -------------------
-https://github.com/user-attachments/assets/994b546d-b176-4243-ac94-01440c6c5e18
+
 
 Key Features
 -------------------
