@@ -1,0 +1,108 @@
+body {
+    background-color: #212121;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 435px;
+    text-align: center;
+    user-select: none;
+}
+
+.logo {
+    width: 155px;
+    height: 160px;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #333333;
+}
+
+.input-group input {
+    padding: 0.8rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    border-color: #0A2485;
+    outline: none;
+}
+
+.login-button {
+    background-color: #343138;
+    color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Courier New', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 0.05px solid #000000;
+}
+
+.login-button:hover {
+    background: linear-gradient(to right, #0A2485, #4352DD);
+}
+
+.volf-title {
+    font-family: 'Book Antiqua', serif;
+    font-size: 2.5rem;
+    color: #000000;
+    font-weight: bold;
+    margin: 0.5rem 0 0;
+    margin-bottom: 0.7rem;
+}
+
+.volf-subtitle {
+    font-size: 1rem;
+    color: #464646;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 11.5px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    font-family: 'Book Antiqua', serif;
+}
+
+.footer p {
+    margin: 0;
+}

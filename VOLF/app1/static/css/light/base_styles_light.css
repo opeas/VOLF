@@ -1,0 +1,393 @@
+/* -------------------- NAVBAR -------------------- */
+
+.navbar-custom {
+  background: #ececec;
+  box-shadow: 6px 6px 12px rgba(6, 36, 72, 0.3);
+  padding-top: 0px;
+  padding-bottom: 4px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+  user-select: none;
+  font-family: 'Book Antiqua', serif;
+  margin-left: 4px;
+}
+
+.navbar-custom .nav-link {
+  color: #000;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #000;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.nav-link-box {
+  display: inline-block;
+  padding: 9px 9px !important;
+  margin-left: 0px !important;
+  margin-right: 4px !important;
+  border-radius: 7px !important;
+  background-color: #ececec !important;
+  color: #000000 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 13px !important;
+  font-family: 'Courier New', sans-serif !important;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0s ease !important;
+  box-shadow: 0 4px 8px rgba(6, 36, 72, 0.2) !important;
+  border: 0.05px solid #00000023 !important;
+  pointer-events: all !important;
+  user-select: none !important;
+  touch-action: manipulation !important;
+  position: relative !important;
+  transform: scale(1) !important;
+  min-width: 100px;
+}
+
+.nav-link-box:hover {
+  background: linear-gradient(to bottom, #1f3ba0, #4352DD) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 18px rgba(6, 36, 72, 0.3) !important;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 5px;
+  margin-right: 5px;
+  user-select: none;
+}
+
+.navbar-logo {
+  height: 45px;
+  vertical-align: middle;
+  margin-top: 2px;
+}
+
+/* -------------------- DATA ENTRY FORM -------------------- */
+
+.base-form-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+}
+
+.base-form-container h2 {
+  font-size: 28px;
+  background: linear-gradient(to right, #0A2485, #4352DD);
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.base-form {
+  background-color: #ececec;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(6, 36, 72, 0.3);
+}
+
+.base-form label {
+  font-size: 15px;
+  color: #000;
+  display: block;
+}
+
+.base-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #00000023;
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.base-form input[type="text"]:focus {
+  background: linear-gradient(to right, #0A2485, #4352DD);
+  border-color: #ffffff;
+  color: #fff;
+  outline: none;
+}
+
+.base-form button {
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.base-form button:hover {
+  background: linear-gradient(to right, #0A2485, #4352DD);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.base-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 27px;
+  border-radius: 5px;
+  border: 1px solid #00000023;
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  resize: vertical;
+  overflow-y: vertical;
+  height: 45px;
+  min-height: 45px;
+  transition: background-color 0.3s ease;
+}
+
+.base-form textarea:focus {
+  background: linear-gradient(to right, #0A2485, #4352DD);
+  color: #fff;
+  border-color: #ffffff;
+  outline: none;
+}
+
+.base-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #00000023;
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  height: 45px;
+  transition: background-color 0.3s ease;
+}
+
+.base-form select option {
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+}
+
+.base-form select:focus {
+  outline: none;
+  background: linear-gradient(to right, #0A2485, #4352DD);
+  color: #fff;
+  border-color: #ffffff;
+}
+
+.base-form-container label,
+.base-form-container input[type="text"],
+.base-form-container button {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.base-form-container .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0px !important;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.base-form-container input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00000023;
+  border-radius: 5px;
+  background-color: #ececec;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+
+.base-form-container input[type="checkbox"]::after {
+  content: "✔";
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.base-form-container input[type="checkbox"]:checked {
+  background-color: #4352DD;
+  border-color: #ffffff;
+}
+
+.base-form-container input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.base-form-container input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.base-form-container .checkbox-label {
+  font-size: 15px;
+  color: #000;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 5px;
+}
+
+/* -------------------- RETURNED FORM RESULTS -------------------- */
+
+.base-results {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 -4px 8px rgba(6, 36, 72, 0.3), 0 1px 2px rgba(6, 36, 72, 0.1);
+}
+
+.base-result-item {
+  margin-bottom: 15px;
+}
+
+.base-result-item label {
+  font-size: 15px;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.base-result-item .result-text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: 1px solid #4352DD;
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.base-result-item .result-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #4352DD;
+  background-color: #ececec;
+  color: #000;
+  font-size: 15px;
+  resize: vertical;
+  overflow-y: vertical;
+  height: 45px;
+  min-height: 45px;
+  transition: background-color 0.3s ease;
+}
+
+.base-result-item .result-textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* -------------------- ACCOUNT OPTIONS DROPDOWN MENU -------------------- */
+
+.dropdown-menu {
+  background: #ececec;
+  background-clip: padding-box;
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2);
+  left: 0;
+  border-radius: 0 0 0 7px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  border-top: none;
+  margin-top: 4px !important;
+  transform: translateX(-6px) !important;
+}
+
+.dropdown-item {
+  color: #000;
+  font-family: 'Courier New', sans-serif;
+  font-size: 13px;
+  transform: scale(1);
+  overflow: hidden;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(to bottom, #1f3ba0, #4352DD);
+  color: #ffffff;
+}
+
+/* -------------------- CSS FOR ALL PAGES -------------------- */
+
+body {
+  background-color: #F6F6F6;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+form {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.text_container {
+  width: 900px;
+  border: 1px solid #00000023;
+  padding: 20px;
+  margin: auto;
+  background-color: #ececec;
+  border-radius: 7px;
+  box-shadow: 0 -4px 8px rgba(6, 36, 72, 0.3), 0 1px 2px rgba(6, 36, 72, 0.1);
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 15px;
+  user-select: none;
+}
+
+ul {
+  font-family: "Courier New", Courier, monospace;
+  list-style-type: disc;
+  padding-left: 22px;
+  line-height: 1.5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.notification.show {
+  display: block;
+}

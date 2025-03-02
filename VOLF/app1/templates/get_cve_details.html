@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+VOLF | Get CVE details
+{% endblock %}
+
+{% block content %}
+<div class="base-form-container">
+    <form action="/get_cve_details_" method="POST" class="base-form">
+        {% csrf_token %}
+        <label for="cve_field" style="user-select: none;">CVE</label>
+        <textarea id="cve_field" name="cve_field"></textarea>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="custom-checkbox" name="cvss_checkbox" value="true">
+            <label for="custom-checkbox" class="checkbox-label" style="user-select: none;">Exclude CVEs with CVSS Base Score below 7.0</label>
+        </div>
+
+        <button id="stat-btn" class="nav-link nav-link-box" style="font-size: 15px !important;">Generate</button>
+    </form>
+</div>
+
+{% if not result6 %}
+<div class="text_container">
+    Enter CVE numbers to search the web for relevant information.
+    <br><br>
+    In the CVE field, you can enter a single CVE or a list of multiple CVEs, regardless of format.
+    <br><br>
+    Selecting the checkbox 'Exclude CVEs with CVSS Base Score below 7.0' will return information only for vulnerabilities with a CVSS score above 7.0.
+    <br><br>
+    If you select the 'Exclude CVEs with CVSS Base Score below 7.0' checkbox and provide a list containing more than 4 CVEs, vulnerabilities that do not exist in the CVE MITRE database will be removed from the results. You will receive an additional list with information about the rejected CVEs.
+</div>
+{% endif %}
+
+{% if result1 or result2 or result3 or result4 or result5 or result6 or result7 or result8%}
+<div class="base-results">
+    {% if resultCVE %}
+    <div class="base-result-item">
+        <label for="result1">Filtered CVE numbers:</label>
+        <textarea class="result-textarea" readonly style="height: 180px;">{{ resultCVE }}</textarea>
+    </div>
+    {% endif %}
+    {% if result7 %}
+    <div class="base-result-item">
+        <label for="result7">Rejected CVEs due to lack of data in the CVE MITRE database:</label>
+        <textarea class="result-textarea" readonly style="height: 180px;">{{ result7 }}</textarea>
+    </div>
+    {% endif %}
+    <div class="base-result-item">
+        <label for="result1">Source:</label>
+        <textarea class="result-textarea" readonly style="height: 270px;">{{ result1 }}</textarea>
+    </div>
+    <div class="base-result-item">
+        <label for="result2">Affected versions:</label>
+        <textarea class="result-textarea" readonly style="height: 270px;">{{ result2 }}</textarea>
+    </div>
+    <div class="base-result-item">
+        <label for="result3">Recommended version:</label>
+        <textarea class="result-textarea" readonly style="height: 270px;">{{ result3 }}</textarea>
+    </div>
+    <div class="base-result-item">
+        <label for="result4">CVSS v3.0:</label>
+        <textarea class="result-textarea" readonly style="height: 75px;">{{ result4 }}</textarea>
+    </div>
+    <div class="base-result-item">
+        <label for="result5">Priority:</label>
+        <p class="result-text">{{ result5 }}</p>
+    </div>
+    <div class="base-result-item">
+        <label for="result6">Description:</label>
+        <textarea class="result-textarea" readonly style="height: 270px;">{{ result6 }}</textarea>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

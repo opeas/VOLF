@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+VOLF | Latest Vulnerabilities
+{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let theme = getCookie('theme') || 'dark';
+            let link = document.createElement('link');
+            link.rel = 'stylesheet';
+            if (theme === 'light') {
+                link.href = '{% static "css/light/home_light.css" %}';
+            } else {
+                link.href = '{% static "css/dark/home_dark.css" %}';
+            }
+            document.head.appendChild(link);
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+<script src="{% static 'js/copyToClipboard.js' %}"></script>
+
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Product</th>
+            <th>Source</th>
+            <th>CVE</th>
+            <th>CVSS</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vulnerability in vulnerabilities %}
+        <tr>
+            <td>{{ vulnerability.date|date:"d.m.Y" }}</td>
+            <td>{{ vulnerability.product }}</td>
+            <td>
+                <a href="{{ vulnerability.link }}" class="copy-link" oncalick="copyToClipboard(event, '{{ vulnerability.link }}'); return false;">Link</a>
+            </td>
+            <td>{{ vulnerability.CVE }}</td>
+            <td>
+                {% if vulnerability.CVSS %}
+                    CVSS is above 7.0
+                {% else %}
+                    No data about CVSS
+                {% endif %} 
+                <td class="status-icon" style="position: relative; bottom: 2px; user-select: none; cursor: pointer;" onclick="handleClick()">
+                    {% if vulnerability.verified %}
+                        <span class="verified">Verified</span>
+                    {% else %}
+                        <span class="new">New</span>
+                    {% endif %}
+                </td>
+            <td>
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="vulnerability_id" value="{{ vulnerability.id }}">
+                    <button type="submit" class="status-icon" style="position: relative; top: 2.5px;">
+                        {% if vulnerability.verified %}
+                        ⏪
+                        {% else %}
+                        ⏩
+                        {% endif %}
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {% empty %}
+        <tr class="empty-row">
+            <td colspan="7">No data to display.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<script src="{% static 'js/copyLink.js' %}"></script>
+{% endblock %}

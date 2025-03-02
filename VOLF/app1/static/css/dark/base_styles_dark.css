@@ -1,0 +1,397 @@
+/* -------------------- NAVBAR -------------------- */
+
+/* Custom navbar styles */
+.navbar-custom {
+  background: #282828;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); 
+  padding-top: 0px; 
+  padding-bottom: 4px; 
+}
+
+.navbar-brand {
+  display: flex; 
+  align-items: center; 
+  font-size: 25px; 
+  font-weight: bold; 
+  color: rgb(255, 255, 255); 
+  user-select: none; 
+  font-family: 'Book Antiqua', serif; 
+  margin-left: 4px;
+}
+
+.navbar-custom .nav-link {
+  color: white;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0A2485;
+}
+
+/* Container margin */
+.container {
+  margin-top: 20px;
+}
+
+/* Styling for the squares in the navigation */
+.nav-link-box {
+display: inline-block;
+padding: 9px 9px !important;
+margin-left: 0px !important;
+margin-right: 4px !important;
+border-radius: 7px !important; 
+background-color: #282828 !important; 
+color: #ffffff !important; 
+text-align: center !important;
+text-decoration: none !important; 
+font-size: 13px !important;
+font-family: 'Courier New', sans-serif !important; 
+transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease !important;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; 
+border: 0.05px solid #000000 !important; 
+pointer-events: all !important; 
+user-select: none !important; 
+touch-action: manipulation !important; 
+position: relative !important; 
+transform: scale(1) !important; 
+min-width: 100px;
+}
+
+.nav-link-box:hover {
+background: linear-gradient(to bottom, #1f3ba0, #4352DD) !important; 
+color: #ffffff !important; 
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3) !important; 
+}
+
+.navbar-nav .nav-item {
+margin-left: 5px;
+margin-right: 5px;
+user-select: none;
+}
+
+/* Logo styling */
+.navbar-logo {
+height: 45px; 
+vertical-align: middle; 
+margin-top: 2px;
+}
+
+/* -------------------- ACCOUNT OPTIONS DROPDOWN MENU -------------------- */
+
+.dropdown-menu {
+  background: #282828;
+  background-clip: padding-box; 
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.2); 
+  right: 0;
+  border-radius: 0 0 0 7px; 
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  overflow: hidden; 
+  border-top: none; 
+  margin-top: 10px !important; 
+  transform: translateX(-6px) !important; 
+}
+
+.dropdown-item {
+  color: #fff; 
+  font-family: 'Courier New', sans-serif; 
+  font-size: 13px;
+  transform: scale(1); 
+  overflow: hidden; 
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(to bottom, #1f3ba0, #4352DD); 
+  color: #ffffff; 
+}
+
+/* -------------------- DATA ENTRY FORM -------------------- */
+
+.base-form-container {
+margin-top: 30px;
+margin-bottom: 30px;
+max-width: 900px;
+margin-left: auto;
+margin-right: auto;
+user-select: none;
+}
+
+.base-form-container h2 {
+font-size: 28px;
+background: linear-gradient(to right, #0A2485, #4352DD);
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.base-form {
+background-color: #282828;
+border-radius: 8px;
+padding: 25px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.base-form label {
+font-size: 15px;
+color: #ffffff;
+display: block;
+}
+
+.base-form input[type="text"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 30px;
+border-radius: 5px;
+border: 1px solid #ffffff;
+background-color: #282828;
+color: #ffffff;
+font-size: 15px;
+transition: background-color 0.3s ease;
+}
+
+.base-form input[type="text"]:focus {
+background: linear-gradient(to right, #0A2485, #4352DD);
+border-color: #ffffff;
+outline: none;
+}
+
+.base-form button {
+color: #ffffff;
+border: none;
+padding: 12px 20px;
+font-size: 18px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.base-form button:hover {
+background: linear-gradient(to right, #0A2485, #4352DD);
+transform: scale(1.05);
+}
+
+.base-form textarea {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+margin-bottom: 27px;
+border-radius: 5px;
+border: 1px solid #ffffff;
+background-color: #282828;
+color: #ffffff;
+font-size: 15px;
+resize: vertical;  
+overflow-y: vertical;  
+height: 45px; 
+min-height: 45px;
+transition: background-color 0.3s ease;
+}
+
+.base-form textarea:focus {
+background: linear-gradient(to right, #0A2485, #4352DD);
+border-color: #ffffff;
+outline: none;
+}
+
+.base-form select {
+width: 100%;
+padding: 10px;
+margin-top: 10px;
+margin-bottom: 30px;
+border-radius: 5px;
+border: 1px solid #ffffff;
+background-color: #282828;
+color: #ffffff;
+font-size: 15px;
+height: 45px;
+transition: background-color 0.3s ease;
+}
+
+.base-form select option {
+background-color: #282828;
+color: #ffffff;
+font-size: 15px;
+}
+
+.base-form select:focus {
+outline: none;
+background: linear-gradient(to right, #0A2485, #4352DD);
+border-color: #ffffff;
+}
+
+.base-form-container label,
+.base-form-container input[type="text"],
+.base-form-container button {
+font-family: 'Courier New', Courier, monospace; 
+}
+
+/* Checkbox container styling */
+.base-form-container .checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0px !important;
+  margin-bottom: 20px;
+  user-select: none;
+  }
+  
+  /* Checkbox styling */
+  .base-form-container input[type="checkbox"] {
+  appearance: none; 
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 5px; 
+  background-color: #282828;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-right: 10px; 
+  position: relative; 
+  }
+  
+  /* Adding checkmark in checkbox */
+  .base-form-container input[type="checkbox"]::after {
+  content: "✔";
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  /* Showing checkmark when checkbox is checked */
+  .base-form-container input[type="checkbox"]:checked {
+  background-color: #4352DD; 
+  border-color: #ffffff;
+  }
+  
+  .base-form-container input[type="checkbox"]:checked::after {
+  display: block; 
+  }
+  
+  .base-form-container input[type="checkbox"]:focus {
+  outline: none;
+  }
+  
+  /* Checkbox label styling */
+  .base-form-container .checkbox-label {
+  font-size: 15px;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 5px;
+}
+
+/* -------------------- RETURNED FORM RESULTS -------------------- */
+
+.base-results {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #282828;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .base-result-item {
+  margin-bottom: 15px;
+  }
+  
+  .base-result-item label {
+  font-size: 15px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+  }
+  
+  .base-result-item .result-text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: 1px solid #4352DD;
+  background-color: #282828;
+  color: #ffffff;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  }
+  
+  .base-result-item .result-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #4352DD;
+  background-color: #282828;
+  color: #ffffff;
+  font-size: 15px;
+  resize: vertical;  
+  overflow-y: vertical;  
+  height: 45px; 
+  min-height: 45px;
+  transition: background-color 0.3s ease;
+  }
+  
+  .base-result-item .result-textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* -------------------- CSS FOR ALL PAGES -------------------- */
+
+body {
+background-color: #212121;
+color: #ffffff;
+font-family: 'Courier New', Courier, monospace;
+overflow-x: hidden !important;
+}
+
+form {
+margin-top: 30px;
+margin-bottom: 40px;
+}
+
+.text_container {
+  width: 900px;
+  border: 1px solid #000000;        
+  padding: 20px;                 
+  margin: auto;                  
+  background-color: #ffffff;     
+  border-radius: 7px;           
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 35px;      
+  margin-bottom: 20px;   
+  color: #000000;
+  font-size: 15px;
+  user-select: none;
+  }
+  
+  ul {
+  font-family: "Courier New", Courier, monospace;
+  list-style-type: disc;         
+  padding-left: 22px;            
+  line-height: 1.5;              
+  margin-top: 5px;              
+  margin-bottom: 5px;           
+  }
+
+  .notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.notification.show {
+    display: block;
+}

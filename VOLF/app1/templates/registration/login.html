@@ -1,0 +1,32 @@
+{% block title %}
+<head>
+    <title>Login to VOLF</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login_styles.css' %}">
+</head>
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-logo">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <h1 class="volf-title" style="user-select: none;">V O L F</h1>
+        <p class="volf-subtitle" style="user-select: none;">Vulnerability Observation & Logging Framework</p>
+    </div>
+    <form method="post" class="login-form">
+        {% csrf_token %}
+        <div class="input-group">
+            <label for="username" style="user-select: none;">Login</label>
+            <input type="text" name="username" id="username" placeholder="" required>
+        </div>
+        <div class="input-group">
+            <label for="password" style="user-select: none;">Password</label>
+            <input type="password" name="password" id="password" placeholder="********" required>
+        </div>
+        <button type="submit" class="login-button">Login</button>
+    </form>
+    <div class="footer">
+        <p style="user-select: none;">© 2025. Project on GitHub: https://github.com/opeas/VOLF</p>
+    </div>
+</div>
+{% endblock %}
