@@ -13,6 +13,8 @@ Key Functionalities
 - Vulnerability Logging: Discovered vulnerabilities are logged in a SQLite database. In the "Latest Vulnerabilities" tab, the 20 most recent vulnerabilities are displayed.
 - CVE Analysis: In the "Get CVE Details" tab, you can quickly search the MITRE CVE database for information on specific CVEs that you have entered. This is especially useful when a vulnerability listed in "Latest Vulnerabilities" also includes new CVE numbers. Paste the CVE numbers into the text field, and the script will fetch the vulnerability details via an API, returning the information in a user-friendly format.
 
+  In the search, you can check the "Exclude CVEs with CVSS below 7.0" checkbox. By selecting this option, vulnerabilities with a severity lower than "High" will be automatically excluded.
+
 Implementation
 -------------------
 After downloading the folder and installing the required libraries (make sure you have ```django``` and ```requests```), navigate to the ```/VOLF``` folder and execute the following commands:
